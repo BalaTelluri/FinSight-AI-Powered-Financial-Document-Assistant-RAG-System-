@@ -1,0 +1,173 @@
+CIGNA HEALTH INSURANCE — SAMPLE PLAN COMPARISON DOCUMENT
+=========================================================
+
+PROVIDER: Cigna Global Health Benefits
+DOCUMENT TYPE: Insurance Product Information Document (IPID) Summary
+DATE: February 2025
+
+=== CIGNA SILVER PLAN ===
+
+Annual Benefit Limit: USD $1,000,000
+
+Hospital & Surgery:
+- Inpatient hospital treatment: Covered in full
+- Day-patient treatment: Covered in full
+- Surgical fees: Covered in full
+- Intensive care: Covered in full
+- Accident & Emergency: Up to $500 per incident
+
+Outpatient:
+- GP consultations: Covered
+- Specialist consultations: Covered
+- Diagnostic tests and X-rays: Covered
+- Prescribed medicines: Covered
+
+Maternity: NOT COVERED
+Newborn Care: Up to $25,000 in the first 90 days of life
+Mental Health (inpatient): Up to 30 days per year
+Home Nursing: Up to 30 days per year
+Dental: Up to $1,250 per year
+
+Waiting periods:
+- Maternity: Not applicable (not covered)
+- Cancer treatment: No waiting period
+- Pre-existing conditions: Subject to medical underwriting
+
+=== CIGNA GOLD PLAN ===
+
+Annual Benefit Limit: USD $2,000,000
+
+Hospital & Surgery:
+- Inpatient hospital treatment: Covered in full
+- Day-patient treatment: Covered in full
+- Surgical fees: Covered in full
+- Intensive care: Covered in full
+- Accident & Emergency: Up to $1,000 per incident
+
+Outpatient:
+- GP consultations: Covered
+- Specialist consultations: Covered
+- Diagnostic tests and X-rays: Covered
+- Prescribed medicines: Covered
+
+Maternity: Up to $7,000 per pregnancy
+- Includes routine antenatal care, delivery and postnatal care
+- 10-month waiting period applies before making a claim
+Newborn Care: Up to $75,000 in the first 90 days of life
+Mental Health (inpatient): Up to 60 days per year
+Home Nursing: Up to 60 days per year
+Infertility Treatment: NOT COVERED
+Dental: Up to $2,500 per year
+
+=== CIGNA PLATINUM PLAN ===
+
+Annual Benefit Limit: PAID IN FULL (no annual cap)
+
+Hospital & Surgery:
+- Inpatient hospital treatment: Paid in full
+- Day-patient treatment: Paid in full
+- Surgical fees: Paid in full
+- Intensive care: Paid in full
+- Accident & Emergency: Up to $2,000 per incident
+
+Outpatient:
+- GP consultations: Paid in full
+- Specialist consultations: Paid in full
+- Diagnostic tests and X-rays: Paid in full
+- Prescribed medicines: Paid in full
+
+Maternity: Up to $14,000 per pregnancy
+- Includes routine antenatal care, delivery and postnatal care
+- 10-month waiting period applies
+Newborn Care: Up to $156,000 in the first 90 days of life
+Infertility Treatment: COVERED (subject to medical necessity)
+Mental Health (inpatient): Up to 90 days per year
+Home Nursing: Up to 120 days per year
+Dental: Up to $5,500 per year
+
+=== EU vs EXP VARIANTS ===
+
+EU (Local Nationals):
+- Designed for local nationals of Cyprus, Denmark, Greece, Malta, Romania
+- Home country is covered as a normal area of cover
+
+EXP (Expatriates):
+- Designed for people living outside their home country
+- Home country visits are covered for up to 180 days per policy year
+- Treatment in your home country beyond 180 days is NOT covered
+- Applies to all three tiers: Silver EXP, Gold EXP, Platinum EXP
+
+=== GENERAL EXCLUSIONS (ALL PLANS) ===
+- Cosmetic or plastic surgery (unless medically necessary after an accident)
+- Experimental or unproven treatments
+- Self-inflicted injuries
+- Treatment arising from war or civil unrest
+- HIV/AIDS (specific conditions apply)
+- Routine eye tests and corrective lenses (unless added as optional benefit)
+
+=== HOW TO MAKE A CLAIM ===
+1. For planned treatment: Request pre-authorisation via Cigna's online portal or helpline
+2. For emergency treatment: Seek treatment immediately, then notify Cigna within 48 hours
+3. Submit claim form with original invoices and receipts
+4. Claims processed within 10 working days
+
+=== CONTACT ===
+Cigna Global Health Benefits: www.cignahealthbenefits.com
+Customer service: available 24/7 in multiple languages
+
+=== ALLIANZ CAR INSURANCE (UK) — SUMMARY ===
+
+PROVIDER: Allianz / LV= Insurance Co.
+COVERAGE TYPE: Comprehensive Motor Insurance
+REGION: United Kingdom
+
+Key Covers:
+- Third-party liability (bodily injury): Unlimited
+- Third-party property damage: Up to £20,000,000
+- Accidental damage to your vehicle: Covered (subject to excess)
+- Fire and theft: Covered
+- Personal accident benefit: Up to £10,000 for driver and named passengers
+- Windscreen repair/replacement: Covered (no excess for repair)
+- Medical expenses: Up to £500 per person
+
+Optional Extras:
+- Breakdown cover (roadside, recovery, home start)
+- Legal expenses cover up to £100,000
+- Hire car during repairs
+
+Exclusions:
+- Driving under influence of alcohol or drugs
+- Using vehicle for hire or reward (e.g. taxi, Uber) unless declared
+- Racing or motorsport events
+- Deliberate damage
+
+No-Claims Discount: Up to 65% after 5 or more claim-free years
+Excess: Compulsory excess £250 + any voluntary excess chosen
+
+=== AVIVA MOTORCARE (IRELAND) — SUMMARY ===
+
+PROVIDER: Aviva Insurance Ireland DAC
+COVERAGE TYPE: Comprehensive Motor Insurance (MotorCare)
+REGION: Republic of Ireland and EU
+
+Key Covers:
+- Third-party liability (bodily injury): Unlimited
+- Third-party property damage: Up to €30,000,000
+- Accidental damage to your vehicle: Covered
+- Fire and theft: Covered
+- Personal accident: Up to €6,500 driver benefit
+- Windscreen: Covered (excess waived for chip repair)
+- EU cover: Automatically included for up to 31 days travel in EU countries
+
+Optional Extras:
+- Breakdown assistance (Ireland and Europe)
+- Gap insurance
+- Legal protection up to €200,000
+
+Exclusions:
+- Commercial use unless declared
+- Driving abroad beyond the 31-day EU limit without extension
+- Unlicensed drivers
+
+No-Claims Discount: Up to 60% with 5 claim-free years
+Compulsory excess: €250 (comprehensive claims)

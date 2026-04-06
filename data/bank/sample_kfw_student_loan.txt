@@ -1,0 +1,58 @@
+KFW STUDENT LOAN — SAMPLE INFORMATION DOCUMENT
+===============================================
+
+PRODUCT: KfW Student Loan (Studienkredit)
+PROVIDER: KfW Bankengruppe, Germany
+VERSION: November 2023
+
+--- OVERVIEW ---
+The KfW Student Loan helps students finance their living costs during their studies in Germany. It is a flexible, low-interest loan available to domestic and international students enrolled at German universities.
+
+--- LOAN AMOUNT ---
+Minimum monthly payment: €100
+Maximum monthly payment: €650
+Maximum total loan amount: €54,600
+Payments are made monthly directly to the student's bank account.
+
+--- ELIGIBILITY ---
+- Enrolled at a state-recognised German university or university of applied sciences
+- Age: between 18 and 44 years old at time of application
+- EU citizens and German residents are eligible
+- Non-EU students may apply if they have been residing in Germany for at least 3 years
+- Must not have already completed a Master's degree or equivalent
+
+--- INTEREST RATE ---
+The interest rate is variable and based on the 6-month EURIBOR plus a fixed margin.
+Current indicative rate: approximately 7.18% per annum (as of Nov 2023) — this varies.
+Interest is charged from the date each monthly payment is disbursed.
+
+--- REPAYMENT ---
+Repayment begins 6 to 23 months after the disbursement phase ends (student chooses).
+Minimum repayment period: 5 years
+Maximum repayment period: 25 years
+Monthly repayments cover principal and interest.
+Early full repayment is possible at any time without penalty.
+
+--- DISBURSEMENT PERIOD ---
+Maximum disbursement period: 14 semesters (7 years)
+Payments stop automatically when the maximum is reached or the student leaves university.
+
+--- APPLICATION ---
+Applications are submitted online via the KfW website: www.kfw.de/studienkredit
+The bank handles the contract; KfW manages the loan.
+Processing time: approximately 4 to 8 weeks.
+
+--- CANCELLATION & CHANGES ---
+Students may cancel or reduce monthly payments with 1 month notice.
+Payments can be paused for up to 2 years during the study phase (once).
+
+--- EXCLUSIONS & IMPORTANT NOTES ---
+- The loan is not available for part-time students
+- Students who have exceeded the standard study period (Regelstudienzeit) by more than 4 semesters may not qualify
+- The loan must be repaid regardless of employment status after graduation
+- KfW does not forgive the loan in case of financial hardship (unlike some state grants)
+- Subsidised BAföG grants are separate and do not affect KfW loan eligibility
+
+--- CONTACT ---
+KfW Infocenter: 0800 539 9001 (free, Mon–Fri 8am–6pm)
+Website: www.kfw.de
