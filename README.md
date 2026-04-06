@@ -1,6 +1,6 @@
 # 🏦 FinSight — AI-Powered Financial Document Assistant
 
-> A **Retrieval-Augmented Generation (RAG)** application that enables users to query complex insurance and banking documents in plain English — with precise, source-cited answers in under 2 seconds.
+> A production-ready **Retrieval-Augmented Generation (RAG)** application that enables users to query complex insurance and banking documents in plain English — with precise, source-cited answers in under 2 seconds.
 
 ---
 
@@ -12,9 +12,10 @@
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
+- [Setup Project Environment](#-setup-project-environment)
+- [Running the App](#-running-the-app)
+- [Environment Variables](#-environment-variables)
 - [Metrics & Evaluation](#-metrics--evaluation)
-- [Interview Highlights](#-interview-highlights)
 - [Author](#-author)
 
 ---
@@ -24,6 +25,13 @@
 **FinSight** is a GenAI-powered financial document assistant built using the RAG (Retrieval-Augmented Generation) architecture. It allows users to ask natural language questions about insurance policies and banking products — and receive accurate, document-grounded answers with source citations.
 
 The system separates documents into **4 categories** (Health Insurance, Car Insurance, Banking, Home Insurance), each with its own FAISS vector index, ensuring answers never mix content across domains.
+
+**Target:** Answer user questions grounded strictly in uploaded financial documents
+
+**Input features passed to RAG pipeline:**
+```
+category selection, user question, spell-corrected query, expanded query
+```
 
 ---
 
@@ -36,7 +44,7 @@ Financial documents like insurance policies and loan agreements are:
 - ❌ Difficult for customers to navigate
 - ❌ Leading to millions of unnecessary customer service calls
 
-**FinSight solves this** by letting users upload their actual policy documents and ask questions in plain English — getting instant, accurate answers grounded in the real document content.
+**FinSight solves this** by letting users ask questions in plain English and getting instant, accurate answers grounded directly in the real document content.
 
 ---
 
@@ -46,37 +54,37 @@ Financial documents like insurance policies and loan agreements are:
 User Question
       │
       ▼
-┌─────────────────┐
-│  Spell Checker  │  ← Auto-corrects typos using Groq LLM
-└─────────────────┘
+┌─────────────────────┐
+│    Spell Checker    │  ← Auto-corrects typos using Groq LLM
+└─────────────────────┘
       │
       ▼
-┌─────────────────┐
-│ Query Expansion │  ← Rewrites question for better retrieval
-└─────────────────┘
+┌─────────────────────┐
+│   Query Expansion   │  ← Rewrites question for better retrieval
+└─────────────────────┘
       │
       ▼
-┌─────────────────────────────────────────────┐
-│           Category Router                   │
-│  Health │  Car  │  Banking  │  Home         │
-└─────────────────────────────────────────────┘
+┌──────────────────────────────────────────┐
+│            Category Router               │
+│  Health  │  Car  │  Banking  │  Home     │
+└──────────────────────────────────────────┘
       │
       ▼
-┌─────────────────┐
-│  FAISS Search   │  ← Semantic similarity search (k=5 chunks)
-│  (per category) │
-└─────────────────┘
+┌─────────────────────┐
+│  FAISS Vector Search│  ← Semantic similarity search (k=5 chunks)
+│   (per category)    │     all-mpnet-base-v2 embeddings
+└─────────────────────┘
       │
       ▼
-┌─────────────────┐
-│  Groq LLM       │  ← Llama 3.3 70B — generates precise answer
-│  (Llama 3.3 70B)│
-└─────────────────┘
+┌─────────────────────┐
+│   Groq LLM          │  ← Llama 3.3 70B — generates precise answer
+│   (Llama 3.3 70B)   │     Temperature = 0
+└─────────────────────┘
       │
       ▼
-┌─────────────────┐
-│  RAGAS Eval     │  ← Faithfulness, Relevancy, Precision scores
-└─────────────────┘
+┌─────────────────────┐
+│   RAGAS Evaluation  │  ← Faithfulness · Relevancy · Precision
+└─────────────────────┘
       │
       ▼
 Answer + Source Document + Metrics
@@ -93,11 +101,11 @@ Answer + Source Document + Metrics
 | 🧠 Query Expansion | LLM rewrites user question before retrieval for higher accuracy |
 | 🔤 Spell Correction | Auto-detects and corrects typos in financial terminology |
 | 📄 Multi-Format Support | PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), CSV, TXT |
-| 📊 Live Metrics Dashboard | Real-time response time, retrieval confidence, answer found rate, RAGAS scores |
+| 📊 Live Metrics Dashboard | Real-time response time, retrieval confidence, answer found rate |
 | 🎯 RAGAS Evaluation | Faithfulness, Answer Relevancy, Context Precision per response |
 | ⚡ Sub-2s Response | Groq-hosted Llama 3.3 70B — 30x faster than local CPU inference |
 | 🔒 Strict Answer Control | Refuses to hallucinate — only answers from document content |
-| 📎 Source Citations | Every answer shows which document and section it came from |
+| 📎 Source Citations | Every answer shows which document it came from |
 
 ---
 
@@ -146,53 +154,167 @@ finsight/
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
+## ⚙️ Setup Project Environment
 
-- Python 3.9+
-- [Groq API key](https://console.groq.com) (free tier available)
+### One-time setup
 
-### Installation
+**Install Python 3.10+**
 
+Link: https://www.python.org/downloads/
+
+To check Python version:
 ```bash
-# 1. Clone the repository
+python -V
+```
+
+> **Note:** Make sure Python is added to your system PATH (environment variables)
+
+**Install pip** (comes with Python — verify with):
+```bash
+pip --version
+```
+
+**Clone the repository**
+```bash
 git clone https://github.com/yourusername/finsight.git
+```
+
+**Change directory into the repo**
+```bash
 cd finsight
+```
 
-# 2. Create virtual environment
+**Create virtual environment**
+```bash
 python3 -m venv venv
-source venv/bin/activate        # Mac/Linux
-# venv\Scripts\activate         # Windows
+```
 
-# 3. Install dependencies
+**Activate virtual environment**
+
+On Mac/Linux:
+```bash
+source venv/bin/activate
+```
+
+On Windows (cmd):
+```bash
+venv\Scripts\activate.bat
+```
+
+On Windows (Git Bash):
+```bash
+source venv/Scripts/activate
+```
+
+> You should see `(venv)` at the start of your terminal line — this confirms the environment is active.
+
+**Install project requirements**
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Set up environment variables
-cp .env.example .env
-# Open .env and paste your Groq API key:
-# GROQ_API_KEY=your_key_here
+> **Note:** First install downloads HuggingFace embedding models (~500MB). Requires good internet connection. This only happens once.
 
-# 5. Add your documents
-# Place PDFs in the correct subfolder:
-# data/health/    ← health insurance documents
-# data/car/       ← car insurance documents
-# data/banking/   ← banking/loan documents
-# data/home/      ← home insurance documents
+> [!CAUTION]
+> Do NOT run `pip freeze > requirements.txt` — it will overwrite the existing requirements file.
 
-# 6. Run the app
+**How to add a new package**
+```bash
+pip install <package-name>
+```
+
+Then add the package name manually to `requirements.txt`.
+
+Python Package Index official link: https://pypi.org/
+
+---
+
+## 🚀 Running the App
+
+**Check your current working directory**
+```bash
+pwd
+# output: /Users/yourname/finsight
+```
+
+**Make sure virtual environment is active**
+```bash
+source venv/bin/activate       # Mac/Linux
+# venv\Scripts\activate.bat   # Windows
+```
+
+**Run the Streamlit app**
+```bash
 streamlit run app.py
 ```
 
-Visit `http://localhost:8501` in your browser.
+Open your browser at:
+```
+http://localhost:8501
+```
+
+> **Note:** Port 8501 is Streamlit's default. If it is already in use, run:
+> ```bash
+> streamlit run app.py --server.port 8502
+> ```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root of the project:
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and add your Groq API key:
+
+```
+GROQ_API_KEY=your_key_here
+```
+
+**How to get a free Groq API key:**
+
+1. Go to https://console.groq.com
+2. Sign up with Google or email (free)
+3. Click **API Keys** in the left menu
+4. Click **Create API Key**
+5. Copy the key (looks like: `gsk_xxxxxxxxxxxxxxxxxxxx`)
+6. Paste it into your `.env` file
+
+> [!CAUTION]
+> Never paste your API key directly in the terminal or share it publicly. Always store it in the `.env` file only.
+
+> [!IMPORTANT]
+> The `.env` file is listed in `.gitignore` — it will NOT be pushed to GitHub. This keeps your key private.
+
+---
+
+## 📂 Adding Your Documents
+
+Place your PDF documents into the correct subfolder inside `data/`:
+
+```
+data/
+├── health/     ← health insurance PDFs go here
+├── car/        ← car insurance PDFs go here
+├── banking/    ← banking / loan PDFs go here
+└── home/       ← home insurance PDFs go here
+```
+
+Supported formats: `.pdf`, `.docx`, `.xlsx`, `.pptx`, `.csv`, `.txt`
+
+> **Note:** Documents must be text-based PDFs (not scanned images). To verify — open the PDF and try to highlight text with your mouse. If text highlights, it works. If not, it is a scanned image and will not be readable.
 
 ---
 
 ## 📊 Metrics & Evaluation
 
-FinSight tracks both **operational** and **RAG quality** metrics in real time:
+FinSight tracks both **operational** and **RAG quality** metrics in real time via the sidebar dashboard.
 
-### Operational Metrics (Live Dashboard)
+### Operational Metrics
 
 | Metric | Description |
 |---|---|
@@ -211,24 +333,22 @@ FinSight tracks both **operational** and **RAG quality** metrics in real time:
 
 ---
 
-## 💼 Interview Highlights
+## ⚠️ Common Issues
 
-**One-line description:**
-> "Built FinSight — a RAG system using LangChain, FAISS and Llama 3.3 70B that enables natural language querying of financial documents, with category-separated vector indexes, RAGAS evaluation and sub-2 second response times via Groq API."
-
-**Key technical decisions:**
-
-- Used `all-mpnet-base-v2` over `all-MiniLM-L6-v2` for 15–20% better retrieval accuracy
-- Separate FAISS index per category eliminates cross-domain answer contamination
-- Query expansion via LLM rewrites the question before retrieval, improving context recall
-- Temperature=0 on the LLM ensures deterministic, precise answers with no randomness
-- Real regulatory documents (IPID/SECCI) used — same format as production enterprise systems
+| Problem | Solution |
+|---|---|
+| `ModuleNotFoundError` | Run `pip install -r requirements.txt` again inside the activated venv |
+| `GROQ_API_KEY not found` | Check `.env` file exists and has no spaces around `=` sign |
+| Slow first response | Normal — HuggingFace model loads into memory on first query |
+| `Port already in use` | Run `streamlit run app.py --server.port 8502` |
+| PDF not loading | Check the PDF is text-based, not a scanned image |
+| Answer mixing categories | Make sure PDFs are placed in the correct subfolder under `data/` |
 
 ---
 
 ## 👤 Author
 
-**Bala Sai Kiran Reddy**  
+**Bala Sai Kiran Reddy**
 ML Engineer | Data Scientist | Stuttgart, Germany
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/bala-sai-kiran-reddy-telluri-055370250/)
