@@ -2,6 +2,8 @@
 
 > A production-ready **Retrieval-Augmented Generation (RAG)** application that enables users to query complex insurance and banking documents in plain English — with precise, source-cited answers in under 2 seconds.
 
+**Key result:** multi-index FAISS retrieval, query expansion and spelling correction raised retrieval performance from **31% to 85%**, with answer quality evaluated using **RAGAS** (Faithfulness, Answer Relevancy, Context Precision).
+
 ---
 
 ## 📌 Table of Contents
